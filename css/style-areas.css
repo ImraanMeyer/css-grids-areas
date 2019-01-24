@@ -51,8 +51,25 @@ body {
     background-color: #8fcc15;
 }
 
+/* mobile view giving 1 column */
+@media (max-width: 600px) {
+    body {
+        background-color: crimson;
+    }
 
-@media (max-width: 700px)  {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar-1"
+            "sidebar-2"
+            "footer"
+    }
+}
+
+/* mobile view for bigger screens giving a longer sidebar-1 over sidebar-2 */
+@media (max-width: 700px) and (min-width: 600px) {
     body {
         background-color: #69c5e9;
     }
@@ -66,6 +83,7 @@ body {
         }
 }
 
+/* tablet view giving two equal columns for the sidebars  */
 @media (max-width: 800px) and (min-width: 701px) {
     body {
         background-color: #529685;
@@ -81,7 +99,3 @@ body {
             "footer footer"
         }
 } 
-
-/* make it responsive for tablet and mobile */
-
-/* tablet 2 coloums */
